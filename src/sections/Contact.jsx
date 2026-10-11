@@ -183,7 +183,7 @@ function Contact() {
               <div className="flex gap-3">
 
                 <a
-                  href="#"
+                  href="https://github.com/Unisb6449"
                   aria-label="GitHub"
                   className="flex h-10 w-10 items-center justify-center rounded-lg border border-[var(--border)] text-[var(--muted)] transition-all duration-200 hover:border-[var(--accent)] hover:text-[var(--accent)]">
                   <FaGithub size={18} />

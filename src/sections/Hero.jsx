@@ -100,7 +100,7 @@ function Hero() {
 
               {/* GitHub */}
               <a
-                href="#"
+                href="https://github.com/Unisb6449"
                 target="_blank"
                 rel="noopener noreferrer"
                 aria-label="GitHub"
