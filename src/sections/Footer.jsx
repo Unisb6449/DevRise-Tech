@@ -105,8 +105,7 @@ function Footer() {
                   href="https://wa.me/2349154212124?text=Hello%20Maoroof%2C%20I%20came%20across%20your%20portfolio%20and%20I%27d%20like%20to%20discuss%20a%20project%20with%20you."
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="flex items-center gap-3 text-sm text-[var(--muted)] transition-colors duration-200 hover:text-[var(--accent)]"
-                >
+                  className="flex items-center gap-3 text-sm text-[var(--muted)] transition-colors duration-200 hover:text-[var(--accent)]">
                   <FaWhatsapp size={20} />
                   <span>WhatsApp</span>
                 </a>
@@ -116,10 +115,9 @@ function Footer() {
             <div className="mt-6 flex gap-3">
 
               <a
-                href="#"
+                href="https://github.com/Unisb6449"
                 aria-label="GitHub"
-                className="flex h-10 w-10 items-center justify-center rounded-lg border border-[var(--border)] text-[var(--muted)] transition-all duration-200 hover:border-[var(--accent)] hover:text-[var(--accent)]"
-              >
+                className="flex h-10 w-10 items-center justify-center rounded-lg border border-[var(--border)] text-[var(--muted)] transition-all duration-200 hover:border-[var(--accent)] hover:text-[var(--accent)]">
                 <FaGithub size={17} />
               </a>
 
