@@ -28,10 +28,9 @@ function Navbar() {
         <a
           href="#home"
           onClick={closeMenu}
-          className="text-xl font-bold tracking-tight text-[var(--foreground)]"
-        >
+          className="text-xl font-bold tracking-tight text-[var(--foreground)]">
           Maoroof{" "}
-          <span className="text-[var(--accent)]">Bello.</span>
+          <span className="text-[var(--accent)]">Yunusa Bello.</span>
         </a>
 
         {/* Desktop Navigation */}
@@ -57,8 +56,7 @@ function Navbar() {
             aria-label={`Switch to ${
               theme === "dark" ? "light" : "dark"
             } mode`}
-            className="flex h-10 w-10 items-center justify-center rounded-lg border border-[var(--border)] bg-[var(--surface)] text-[var(--muted)] transition-all duration-200 hover:border-[var(--accent)] hover:text-[var(--accent)]"
-          >
+            className="flex h-10 w-10 items-center justify-center rounded-lg border border-[var(--border)] bg-[var(--surface)] text-[var(--muted)] transition-all duration-200 hover:border-[var(--accent)] hover:text-[var(--accent)]">
             {theme === "dark" ? (
               <Sun size={18} />
             ) : (
@@ -69,8 +67,7 @@ function Navbar() {
           {/* CTA */}
           <a
             href="#contact"
-            className="rounded-lg bg-[var(--accent)] px-[18px] py-3 text-sm font-semibold text-black transition-all duration-200 hover:-translate-y-0.5 hover:opacity-90"
-          >
+            className="rounded-lg bg-[var(--accent)] px-[18px] py-3 text-sm font-semibold text-black transition-all duration-200 hover:-translate-y-0.5 hover:opacity-90">
             Let's Work Together
           </a>
         </div>
@@ -85,8 +82,7 @@ function Navbar() {
             aria-label={`Switch to ${
               theme === "dark" ? "light" : "dark"
             } mode`}
-            className="flex h-10 w-10 items-center justify-center rounded-lg border border-[var(--border)] bg-[var(--surface)] text-[var(--muted)] transition-all duration-200 hover:border-[var(--accent)] hover:text-[var(--accent)]"
-          >
+            className="flex h-10 w-10 items-center justify-center rounded-lg border border-[var(--border)] bg-[var(--surface)] text-[var(--muted)] transition-all duration-200 hover:border-[var(--accent)] hover:text-[var(--accent)]">
             {theme === "dark" ? (
               <Sun size={18} />
             ) : (
