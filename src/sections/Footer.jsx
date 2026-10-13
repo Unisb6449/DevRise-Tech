@@ -2,7 +2,6 @@ import { ArrowUp, Mail, Phone} from "lucide-react";
 import {
   FaGithub,
   FaLinkedinIn,
-  FaXTwitter,
   FaWhatsapp,
 } from "react-icons/fa6";
 
@@ -66,8 +65,7 @@ function Footer() {
                 <a
                   key={id}
                   href={`#${id}`}
-                  className="w-fit text-sm text-[var(--muted)] transition-colors duration-200 hover:text-[var(--accent)]"
-                >
+                  className="w-fit text-sm text-[var(--muted)] transition-colors duration-200 hover:text-[var(--accent)]">
                   {label}
                 </a>
               ))}
@@ -85,8 +83,7 @@ function Footer() {
               {/* Email */}
               <a
                 href="mailto:yunusamaoroof2022@gmail.com"
-                className="flex items-center gap-3 text-sm text-[var(--muted)] transition-colors duration-200 hover:text-[var(--accent)]"
-              >
+                className="flex items-center gap-3 text-sm text-[var(--muted)] transition-colors duration-200 hover:text-[var(--accent)]">
                 <Mail size={17} />
                 <span>yunusamaoroof2022@gmail.com</span>
               </a>
@@ -118,23 +115,14 @@ function Footer() {
                 href="https://github.com/Unisb6449"
                 aria-label="GitHub"
                 className="flex h-10 w-10 items-center justify-center rounded-lg border border-[var(--border)] text-[var(--muted)] transition-all duration-200 hover:border-[var(--accent)] hover:text-[var(--accent)]">
-                <FaGithub size={17} />
+                <FaGithub size={17}/>
               </a>
 
               <a
                 href="https://www.linkedin.com/in/maoroof-yunusa"
                 aria-label="LinkedIn"
-                className="flex h-10 w-10 items-center justify-center rounded-lg border border-[var(--border)] text-[var(--muted)] transition-all duration-200 hover:border-[var(--accent)] hover:text-[var(--accent)]"
-              >
+                className="flex h-10 w-10 items-center justify-center rounded-lg border border-[var(--border)] text-[var(--muted)] transition-all duration-200 hover:border-[var(--accent)] hover:text-[var(--accent)]">
                 <FaLinkedinIn size={17} />
-              </a>
-
-              <a
-                href="#"
-                aria-label="X"
-                className="flex h-10 w-10 items-center justify-center rounded-lg border border-[var(--border)] text-[var(--muted)] transition-all duration-200 hover:border-[var(--accent)] hover:text-[var(--accent)]"
-              >
-                <FaXTwitter size={16} />
               </a>
 
             </div>
@@ -156,8 +144,7 @@ function Footer() {
             <button
               onClick={scrollToTop}
               aria-label="Back to top"
-              className="flex h-10 w-10 items-center justify-center rounded-lg border border-[var(--border)] text-[var(--muted)] transition-all duration-200 hover:border-[var(--accent)] hover:text-[var(--accent)]"
-            >
+              className="flex h-10 w-10 items-center justify-center rounded-lg border border-[var(--border)] text-[var(--muted)] transition-all duration-200 hover:border-[var(--accent)] hover:text-[var(--accent)]">
               <ArrowUp size={17} />
             </button>
           </div>

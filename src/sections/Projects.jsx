@@ -66,8 +66,7 @@ function Projects() {
   return (
     <section
       id="projects"
-      className="bg-[var(--surface)] py-20 sm:py-24 lg:py-28"
-    >
+      className="bg-[var(--surface)] py-20 sm:py-24 lg:py-28">
       <div className="mx-auto max-w-7xl px-5 sm:px-6 lg:px-8">
 
         {/* Section Header */}
@@ -93,16 +92,14 @@ function Projects() {
               key={project.title}
               className={`group overflow-hidden rounded-2xl border border-[var(--border)] bg-[var(--background)] transition-all duration-300 hover:-translate-y-1 hover:border-[var(--accent)] hover:shadow-xl ${
                 project.featured ? "lg:col-span-2" : ""
-              }`}
-            >
+              }`}>
               {/* Project Preview */}
               <div
                 className={`relative overflow-hidden bg-[var(--surface)] ${
                   project.featured
                     ? "h-64 sm:h-80 lg:h-96"
                     : "h-56 sm:h-64"
-                }`}
-              >
+                }`}>
                 {project.image ? (
                   <img
                     src={project.image}
@@ -111,8 +108,7 @@ function Projects() {
                     loading="lazy"
                     onError={(event) => {
                       event.currentTarget.style.display = "none";
-                    }}
-                  />
+                    }}/>
                 ) : (
                   <div className="absolute inset-0 flex items-center justify-center">
                     <div className="text-center">
@@ -162,8 +158,7 @@ function Projects() {
                         target="_blank"
                         rel="noopener noreferrer"
                         aria-label={`${project.title} live demo`}
-                        className="flex h-10 w-10 items-center justify-center rounded-lg border border-[var(--border)] text-[var(--muted)] transition-all duration-200 hover:border-[var(--accent)] hover:text-[var(--accent)]"
-                      >
+                        className="flex h-10 w-10 items-center justify-center rounded-lg border border-[var(--border)] text-[var(--muted)] transition-all duration-200 hover:border-[var(--accent)] hover:text-[var(--accent)]">
                         <ArrowUpRight size={18} />
                       </a>
                     )}
@@ -175,8 +170,7 @@ function Projects() {
                         target="_blank"
                         rel="noopener noreferrer"
                         aria-label={`${project.title} GitHub repository`}
-                        className="flex h-10 w-10 items-center justify-center rounded-lg border border-[var(--border)] text-[var(--muted)] transition-all duration-200 hover:border-[var(--accent)] hover:text-[var(--accent)]"
-                      >
+                        className="flex h-10 w-10 items-center justify-center rounded-lg border border-[var(--border)] text-[var(--muted)] transition-all duration-200 hover:border-[var(--accent)] hover:text-[var(--accent)]">
                         <FaGithub size={18} />
                       </a>
                     )}
@@ -191,8 +185,7 @@ function Projects() {
                     return (
                       <span
                         key={technology.name}
-                        className="inline-flex items-center gap-2 rounded-lg border border-[var(--border)] bg-[var(--surface)] px-3 py-2 text-xs font-medium text-[var(--muted)] sm:text-sm"
-                      >
+                        className="inline-flex items-center gap-2 rounded-lg border border-[var(--border)] bg-[var(--surface)] px-3 py-2 text-xs font-medium text-[var(--muted)] sm:text-sm">
                         <Icon size={15} />
                         {technology.name}
                       </span>
@@ -210,8 +203,7 @@ function Projects() {
             href="https://github.com/Unisb6449"
             target="_blank"
             rel="noopener noreferrer"
-            className="inline-flex items-center gap-2 rounded-lg border border-[var(--border)] px-6 py-3 text-sm font-semibold text-[var(--foreground)] transition-all duration-200 hover:border-[var(--accent)] hover:text-[var(--accent)]"
-          >
+            className="inline-flex items-center gap-2 rounded-lg border border-[var(--border)] px-6 py-3 text-sm font-semibold text-[var(--foreground)] transition-all duration-200 hover:border-[var(--accent)] hover:text-[var(--accent)]">
             View All Projects
             <ArrowUpRight size={17} />
           </a>

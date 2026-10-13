@@ -1,7 +1,7 @@
 import { useRef, useState } from "react";
 import emailjs from "@emailjs/browser";
 import { Mail, MapPin, Phone, ArrowUpRight } from "lucide-react";
-import { FaGithub, FaLinkedinIn, FaXTwitter, FaWhatsapp } from "react-icons/fa6";
+import { FaGithub, FaLinkedinIn, FaWhatsapp } from "react-icons/fa6";
 
 function Contact() {
   const form = useRef();
@@ -196,13 +196,7 @@ function Contact() {
                   <FaLinkedinIn size={18} />
                 </a>
 
-                <a
-                  href="#"
-                  aria-label="X"
-                  className="flex h-10 w-10 items-center justify-center rounded-lg border border-[var(--border)] text-[var(--muted)] transition-all duration-200 hover:border-[var(--accent)] hover:text-[var(--accent)]">
-                  <FaXTwitter size={17} />
-                </a>
-
+                
               </div>
             </div>
           </div>
@@ -218,8 +212,7 @@ function Contact() {
                 <div>
                   <label
                     htmlFor="name"
-                    className="mb-2 block text-sm font-medium text-[var(--foreground)]"
-                  >
+                    className="mb-2 block text-sm font-medium text-[var(--foreground)]">
                     Your Name
                   </label>
 
@@ -236,8 +229,7 @@ function Contact() {
                 <div>
                   <label
                     htmlFor="email"
-                    className="mb-2 block text-sm font-medium text-[var(--foreground)]"
-                  >
+                    className="mb-2 block text-sm font-medium text-[var(--foreground)]">
                     Email Address
                   </label>
 
@@ -247,8 +239,7 @@ function Contact() {
                     type="email"
                     placeholder="Enter Your Email Address"
                     required
-                    className="w-full rounded-lg border border-[var(--border)] bg-[var(--background)] px-4 py-3 text-sm text-[var(--foreground)] outline-none placeholder:text-[var(--muted)] focus:border-[var(--accent)]"
-                  />
+                    className="w-full rounded-lg border border-[var(--border)] bg-[var(--background)] px-4 py-3 text-sm text-[var(--foreground)] outline-none placeholder:text-[var(--muted)] focus:border-[var(--accent)]"/>
                 </div>
 
               </div>
@@ -257,8 +248,7 @@ function Contact() {
               <div>
                 <label
                   htmlFor="subject"
-                  className="mb-2 block text-sm font-medium text-[var(--foreground)]"
-                >
+                  className="mb-2 block text-sm font-medium text-[var(--foreground)]">
                   Subject
                 </label>
 
@@ -268,16 +258,14 @@ function Contact() {
                   type="text"
                   placeholder="Project inquiry"
                   required
-                  className="w-full rounded-lg border border-[var(--border)] bg-[var(--background)] px-4 py-3 text-sm text-[var(--foreground)] outline-none placeholder:text-[var(--muted)] focus:border-[var(--accent)]"
-                />
+                  className="w-full rounded-lg border border-[var(--border)] bg-[var(--background)] px-4 py-3 text-sm text-[var(--foreground)] outline-none placeholder:text-[var(--muted)] focus:border-[var(--accent)]"/>
               </div>
 
               {/* Message */}
               <div>
                 <label
                   htmlFor="message"
-                  className="mb-2 block text-sm font-medium text-[var(--foreground)]"
-                >
+                  className="mb-2 block text-sm font-medium text-[var(--foreground)]">
                   Message
                 </label>
 
@@ -287,8 +275,7 @@ function Contact() {
                   rows="6"
                   placeholder="Tell me a little about your project..."
                   required
-                  className="w-full resize-none rounded-lg border border-[var(--border)] bg-[var(--background)] px-4 py-3 text-sm text-[var(--foreground)] outline-none placeholder:text-[var(--muted)] focus:border-[var(--accent)]"
-                />
+                  className="w-full resize-none rounded-lg border border-[var(--border)] bg-[var(--background)] px-4 py-3 text-sm text-[var(--foreground)] outline-none placeholder:text-[var(--muted)] focus:border-[var(--accent)]"/>
               </div>
 
               {/* Status Message */}
@@ -298,8 +285,7 @@ function Contact() {
                     status.type === "success"
                       ? "border-green-500/30 text-green-500"
                       : "border-red-500/30 text-red-500"
-                  }`}
-                >
+                  }`}>
                   {status.message}
                 </div>
               )}
@@ -308,8 +294,7 @@ function Contact() {
               <button
                 type="submit"
                 disabled={isSending}
-                className="inline-flex w-full items-center justify-center gap-2 rounded-lg bg-[var(--accent)] px-6 py-3.5 text-sm font-semibold text-black transition-all duration-200 hover:-translate-y-0.5 hover:opacity-90 disabled:cursor-not-allowed disabled:opacity-60"
-              >
+                className="inline-flex w-full items-center justify-center gap-2 rounded-lg bg-[var(--accent)] px-6 py-3.5 text-sm font-semibold text-black transition-all duration-200 hover:-translate-y-0.5 hover:opacity-90 disabled:cursor-not-allowed disabled:opacity-60">
                 {isSending ? "Sending..." : "Send Message"}
 
                 {!isSending && <ArrowUpRight size={17} />}
