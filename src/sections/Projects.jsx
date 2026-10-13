@@ -1,3 +1,4 @@
+
 import { ArrowUpRight } from "lucide-react";
 
 import {
@@ -17,62 +18,47 @@ const projects = [
     title: "Modern E-Commerce Platform",
     description:
       "A modern e-commerce experience with responsive layouts, product browsing, and a clean user interface.",
+    image: "/images/ecommerce.png",
     technologies: [
-      {
-        name: "React",
-        icon: FaReact,
-      },
-      {
-        name: "Tailwind CSS",
-        icon: SiTailwindcss,
-      },
-      {
-        name: "Node.js",
-        icon: FaNodeJs,
-      },
-      {
-        name: "MongoDB",
-        icon: SiMongodb,
-      },
+      { name: "React", icon: FaReact },
+      { name: "Tailwind CSS", icon: SiTailwindcss },
+      { name: "Node.js", icon: FaNodeJs },
+      { name: "MongoDB", icon: SiMongodb },
     ],
     category: "Full Stack",
     featured: true,
+    liveDemo: "",
+    github: "",
   },
 
   {
-    title: "Business Landing Page",
+    title: "Grace Community Church Website",
     description:
-      "A professional responsive website designed to help a business establish a strong online presence.",
+      "A modern, responsive church website designed to share the gospel, connect the church community, showcase sermons and events, and help visitors learn more about Grace Community Church.",
+    image: "/images/grace-community.PNG",
     technologies: [
-      {
-        name: "React",
-        icon: FaReact,
-      },
-      {
-        name: "Bootstrap",
-        icon: FaBootstrap,
-      },
+      { name: "React", icon: FaReact },
+      { name: "Bootstrap", icon: FaBootstrap },
     ],
     category: "Frontend",
     featured: false,
+    liveDemo: "https://grace-community-church-beta.vercel.app",
+    github: "https://github.com/Unisb6449/Grace-Community-Church",
   },
 
   {
-    title: "Developer Dashboard",
+    title: "Personal Portfolio Website",
     description:
-      "A clean dashboard interface focused on usability, responsive design, and reusable components.",
+      "A modern, responsive portfolio website designed to showcase my skills, projects, experience, and services with a clean UI and user-friendly experience.",
+    image: "/images/maoroof-portfolio.PNG",
     technologies: [
-      {
-        name: "React",
-        icon: FaReact,
-      },
-      {
-        name: "Tailwind CSS",
-        icon: SiTailwindcss,
-      },
+      { name: "React", icon: FaReact },
+      { name: "Tailwind CSS", icon: SiTailwindcss },
     ],
     category: "Frontend",
     featured: false,
+    liveDemo: "https://maoroofyunusabello.vercel.app",
+    github: "https://github.com/Unisb6449/Maoroof-Yunusa-Bello",
   },
 ];
 
@@ -102,7 +88,6 @@ function Projects() {
 
         {/* Projects Grid */}
         <div className="mt-12 grid gap-6 lg:grid-cols-2">
-
           {projects.map((project) => (
             <article
               key={project.title}
@@ -110,7 +95,6 @@ function Projects() {
                 project.featured ? "lg:col-span-2" : ""
               }`}
             >
-
               {/* Project Preview */}
               <div
                 className={`relative overflow-hidden bg-[var(--surface)] ${
@@ -119,20 +103,31 @@ function Projects() {
                     : "h-56 sm:h-64"
                 }`}
               >
-                {/* Placeholder */}
-                <div className="absolute inset-0 flex items-center justify-center">
-                  <div className="text-center">
-                    <div className="mx-auto flex h-16 w-16 items-center justify-center rounded-2xl border border-[var(--border)] bg-[var(--background)] text-[var(--accent)] shadow-lg">
-                      <span className="text-2xl font-bold">
-                        {"</>"}
-                      </span>
-                    </div>
+                {project.image ? (
+                  <img
+                    src={project.image}
+                    alt={`${project.title} screenshot`}
+                    className="h-full w-full object-cover object-top transition-transform duration-500 group-hover:scale-105"
+                    loading="lazy"
+                    onError={(event) => {
+                      event.currentTarget.style.display = "none";
+                    }}
+                  />
+                ) : (
+                  <div className="absolute inset-0 flex items-center justify-center">
+                    <div className="text-center">
+                      <div className="mx-auto flex h-16 w-16 items-center justify-center rounded-2xl border border-[var(--border)] bg-[var(--background)] text-[var(--accent)] shadow-lg">
+                        <span className="text-2xl font-bold">
+                          {"</>"}
+                        </span>
+                      </div>
 
-                    <p className="mt-4 text-sm font-medium text-[var(--muted)]">
-                      Project Preview
-                    </p>
+                      <p className="mt-4 text-sm font-medium text-[var(--muted)]">
+                        Project Preview
+                      </p>
+                    </div>
                   </div>
-                </div>
+                )}
 
                 {/* Category */}
                 <div className="absolute left-5 top-5">
@@ -144,7 +139,6 @@ function Projects() {
 
               {/* Project Information */}
               <div className="p-6 sm:p-8">
-
                 <div className="flex flex-col gap-5 sm:flex-row sm:items-start sm:justify-between">
 
                   {/* Project Details */}
@@ -162,23 +156,30 @@ function Projects() {
                   <div className="flex shrink-0 gap-2">
 
                     {/* Live Demo */}
-                    <a
-                      href="#"
-                      aria-label={`${project.title} live demo`}
-                      className="flex h-10 w-10 items-center justify-center rounded-lg border border-[var(--border)] text-[var(--muted)] transition-all duration-200 hover:border-[var(--accent)] hover:text-[var(--accent)]"
-                    >
-                      <ArrowUpRight size={18} />
-                    </a>
+                    {project.liveDemo && (
+                      <a
+                        href={project.liveDemo}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        aria-label={`${project.title} live demo`}
+                        className="flex h-10 w-10 items-center justify-center rounded-lg border border-[var(--border)] text-[var(--muted)] transition-all duration-200 hover:border-[var(--accent)] hover:text-[var(--accent)]"
+                      >
+                        <ArrowUpRight size={18} />
+                      </a>
+                    )}
 
                     {/* GitHub */}
-                    <a
-                      href="#"
-                      aria-label={`${project.title} GitHub repository`}
-                      className="flex h-10 w-10 items-center justify-center rounded-lg border border-[var(--border)] text-[var(--muted)] transition-all duration-200 hover:border-[var(--accent)] hover:text-[var(--accent)]"
-                    >
-                      <FaGithub size={18} />
-                    </a>
-
+                    {project.github && (
+                      <a
+                        href={project.github}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        aria-label={`${project.title} GitHub repository`}
+                        className="flex h-10 w-10 items-center justify-center rounded-lg border border-[var(--border)] text-[var(--muted)] transition-all duration-200 hover:border-[var(--accent)] hover:text-[var(--accent)]"
+                      >
+                        <FaGithub size={18} />
+                      </a>
+                    )}
                   </div>
                 </div>
 
@@ -201,13 +202,14 @@ function Projects() {
               </div>
             </article>
           ))}
-
         </div>
 
         {/* View All Projects */}
         <div className="mt-10 flex justify-center">
           <a
-            href="#"
+            href="https://github.com/Unisb6449"
+            target="_blank"
+            rel="noopener noreferrer"
             className="inline-flex items-center gap-2 rounded-lg border border-[var(--border)] px-6 py-3 text-sm font-semibold text-[var(--foreground)] transition-all duration-200 hover:border-[var(--accent)] hover:text-[var(--accent)]"
           >
             View All Projects

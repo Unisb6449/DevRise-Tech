@@ -39,8 +39,7 @@ function Navbar() {
             <a
               key={link.name}
               href={link.href}
-              className="text-[15px] font-medium text-[var(--muted)] transition-colors duration-200 hover:text-[var(--accent)]"
-            >
+              className="text-[15px] font-medium text-[var(--muted)] transition-colors duration-200 hover:text-[var(--accent)]">
               {link.name}
             </a>
           ))}
@@ -96,8 +95,7 @@ function Navbar() {
             onClick={() => setIsMenuOpen(!isMenuOpen)}
             aria-label="Toggle navigation menu"
             aria-expanded={isMenuOpen}
-            className="flex h-10 w-10 items-center justify-center rounded-lg border border-[var(--border)] bg-[var(--surface)] text-[var(--foreground)] transition-colors hover:border-[var(--accent)] hover:text-[var(--accent)]"
-          >
+            className="flex h-10 w-10 items-center justify-center rounded-lg border border-[var(--border)] bg-[var(--surface)] text-[var(--foreground)] transition-colors hover:border-[var(--accent)] hover:text-[var(--accent)]">
             {isMenuOpen ? <X size={20} /> : <Menu size={20} />}
           </button>
         </div>
@@ -112,8 +110,7 @@ function Navbar() {
                 key={link.name}
                 href={link.href}
                 onClick={closeMenu}
-                className="text-base font-medium text-[var(--muted)] transition-colors duration-200 hover:text-[var(--accent)]"
-              >
+                className="text-base font-medium text-[var(--muted)] transition-colors duration-200 hover:text-[var(--accent)]">
                 {link.name}
               </a>
             ))}
@@ -122,8 +119,7 @@ function Navbar() {
             <a
               href="#contact"
               onClick={closeMenu}
-              className="mt-2 inline-flex w-fit rounded-lg bg-[var(--accent)] px-5 py-3 text-sm font-semibold text-black transition-all duration-200 hover:-translate-y-0.5 hover:opacity-90"
-            >
+              className="mt-2 inline-flex w-fit rounded-lg bg-[var(--accent)] px-5 py-3 text-sm font-semibold text-black transition-all duration-200 hover:-translate-y-0.5 hover:opacity-90">
               Let's Work Together
             </a>
           </div>
